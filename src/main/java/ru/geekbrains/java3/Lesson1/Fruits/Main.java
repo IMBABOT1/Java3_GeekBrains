@@ -24,7 +24,7 @@ public class Main {
 
         orangeBox.pour(orangeBox1);
 
-      / System.out.println(orangeBox1);
+      // System.out.println(orangeBox1);
 
         System.out.println(orangeBox);
 
