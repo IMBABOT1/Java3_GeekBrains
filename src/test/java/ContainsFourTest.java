@@ -40,5 +40,4 @@ public class ContainsFourTest {
     public void containsFourTest(){
         Assert.assertArrayEquals(output, containsFour.containsFour(input));
     }
-
 }
