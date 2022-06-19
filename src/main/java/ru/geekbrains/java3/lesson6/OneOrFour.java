@@ -2,7 +2,7 @@ package ru.geekbrains.java3.lesson6;
 
 public class OneOrFour {
 
-    private boolean oneOrFour(int[] arr){
+    public boolean oneOrFour(int[] arr){
         boolean isContainsOne = false;
         boolean isContainsFour = false;
         boolean isContainsTemp = false;
