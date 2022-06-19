@@ -19,7 +19,10 @@ public class OneOrFourTest {
                 {new int[]{1, 1, 1, 1, 1, 1}, false},
                 {new int[]{4,4,4,4},false},
                 {new int[]{1, 4, 4, 1, 1, 4, 3}, false},
+                {new int[]{4}, false},
+                {new int[]{1}, false},
                 {new int[]{1,4}, true}
+
         });
     }
 

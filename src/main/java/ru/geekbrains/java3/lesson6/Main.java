@@ -16,9 +16,8 @@ public class Main {
 
          ContainsFour containsFour = new ContainsFour();
         System.out.println(Arrays.toString(containsFour.containsFour(arr)));
-         ;
 
-//        int[] arr = new int[]{1, 1, 1, 4, 4, 1, 4, 4};
+        //int[] arr = new int[]{1, 1, 1, 4, 4, 1, 4, 4};
 //        int[] arr1 = new int[]{1, 1, 1, 1, 1, 1};
 //        int[] arr2 = new int[]{4,4,4,4};
 //        int[] arr3 = new int[]{1, 4, 4, 1, 1, 4, 3};
