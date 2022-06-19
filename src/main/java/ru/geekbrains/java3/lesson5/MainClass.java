@@ -14,6 +14,8 @@ public class MainClass {
     public static final int CARS_COUNT = 4;
     public static CyclicBarrier cb = new CyclicBarrier(5);
 
+    private static AtomicInteger ai =new AtomicInteger();
+
 
 
     public static void main(String[] args) throws BrokenBarrierException, InterruptedException {
@@ -53,6 +55,8 @@ class Car implements Runnable {
         CARS_COUNT++;
         this.name = "Участник #" + CARS_COUNT;
     }
+
+
     @Override
     public void run() {
 
@@ -69,6 +73,7 @@ class Car implements Runnable {
             race.getStages().get(i).go(this);
         }
 
+
     }
 }
 abstract class Stage {
@@ -84,17 +89,13 @@ class Road extends Stage {
         this.length = length;
         this.description = "Дорога " + length + " метров";
     }
-    AtomicInteger ai = new AtomicInteger();
+
     @Override
     public void go(Car c) {
         try {
             System.out.println(c.getName() + " начал этап: " + description);
             Thread.sleep(length / c.getSpeed() * 1000);
             System.out.println(c.getName() + " закончил этап: " + description);
-           // ai.addAndGet(10);
-            if (ai.addAndGet(10) == 20 &&){
-                System.out.println(c.getName() + " WIN!");
-            }
             cb.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
